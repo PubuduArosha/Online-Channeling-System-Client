@@ -27,14 +27,16 @@ public class AdminRepository {
 	public String getHospitals(){
 		
 		String output = "";
-		 output = "<table border=\'1\'>"
+		 output = "<table class=\"table\" >"
+				+"<thead>"
 		 		+ "<tr>"
 		 		+ "<th>hospital Id</th>"
 		 		+ "<th>hospital Name</th>"
 		 		+ "<th>Address</th>"
 		 		+ "<th>Update</th>"
 		 		+ "<th>Remove</th>"
-		 		+ "</tr>";
+		 		+ "</tr>"
+		 		+ "</thead>";
 		
 	
 		String sql = "select * from hospital";

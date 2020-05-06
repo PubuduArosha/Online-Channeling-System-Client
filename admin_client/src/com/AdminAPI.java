@@ -1,6 +1,7 @@
 package com;
 
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -55,9 +56,12 @@ AdminRepository adminRepository = new AdminRepository();
 		Map paras = getParasMap(request);
 		System.out.println(paras);
 		Admin admin = new  Admin();
+		
+		String decodedHospitalName = URLDecoder.decode(paras.get("hostname").toString(), "UTF-8"); // Email decoder
+		String decodedLocation = URLDecoder.decode(paras.get("hostlocation").toString(), "UTF-8"); // Email decoder
 		admin.setAdminID(Integer.valueOf(paras.get("adminid").toString()));
-		admin.setHospitalName(paras.get("hostname").toString());
-		admin.setLocation(paras.get("hostlocation").toString());
+		admin.setHospitalName(decodedHospitalName);
+		admin.setLocation(decodedLocation);
 		admin.setHospitalID(Integer.valueOf(paras.get("hidItemIDSave").toString()));
 		String	 output = adminRepository.update(admin);
 		response.getWriter().write(output);

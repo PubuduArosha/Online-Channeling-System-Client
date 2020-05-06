@@ -47,7 +47,8 @@ pageEncoding="ISO-8859-1"%>
 			    </nav>
 			    
 			<!-- body -->
-			<div class="container">
+			<div>
+				<div class="container">
 				<div class="row">
 				<div class="col-6">
 					<br/>
@@ -66,7 +67,8 @@ pageEncoding="ISO-8859-1"%>
 	 					<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
 	 					
 					</form>
-						
+					</div>
+					<div>
 					<div id="alertSuccess" class="alert alert-success"></div>
 					<div id="alertError" class="alert alert-danger"></div>
 					<br>
@@ -78,6 +80,7 @@ pageEncoding="ISO-8859-1"%>
 						</div>
 				</div>
  			</div>
+			</div>
 			</div>
 		</div>
 

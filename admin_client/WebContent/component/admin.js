@@ -3,14 +3,10 @@ $(document).on("click", ".btnUpdate", function(event) {
 	$("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIdUpdate').val());
 	$("#hostname").val($(this).closest("tr").find('td:eq(1)').text());
 	$("#hostlocation").val($(this).closest("tr").find('td:eq(2)').text());
-
-
 	
 	$("#alertSuccess").text().trim() == "Data Retrived"
 
 });
-
-
 
 $(document).ready(function () {
 	 document.forms['form'].reset();
@@ -52,7 +48,6 @@ $(document).on("click", "#btnSave", function(event) {
 		complete : function(response, status) 
 		{   
 			onItemSaveComplete(response.responseText, status);  
-		
 		} 
 	}); 
 	
@@ -72,8 +67,7 @@ function onItemSaveComplete(response, status) {
 	
 	{  
 		$("#alertError").text(resultSet.data); 
-		$("#alertError").show(); 
-		
+		$("#alertError").show(); 	
 	}
 	else if (status == "error") {
 		
@@ -92,7 +86,6 @@ function onItemSaveComplete(response, status) {
 
 
 $(document).on("click", ".btnRemove", function(event) { 
-	
 	console.log( $(this).val());
 	$.ajax( { 
 		url : "AdminAPI",   
@@ -102,7 +95,6 @@ $(document).on("click", ".btnRemove", function(event) {
 		complete : function(response, status) 
 		{   
 			onItemDeleteComplete(response.responseText, status);  
-		
 		} 
 	}); 
 	
@@ -140,9 +132,7 @@ function onItemDeleteComplete(response, status) {
 }
 
 
-
-	
-	
+//validation 
 
 function validateItemForm() {  
 	
@@ -160,8 +150,6 @@ function validateItemForm() {
 
 	return "Please Enter adminid";
 	} 
-
 	
-	return true; 
-	 
+	return true;  
 	}
