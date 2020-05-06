@@ -1,4 +1,4 @@
-# health-care-client
+# Health Care Client
 
 
 SLIIT 3rd Year - PAF project
